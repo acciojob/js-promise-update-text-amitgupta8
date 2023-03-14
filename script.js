@@ -1,12 +1,12 @@
-function delayedGreeting() {
-        return new Promise(function(resolve, reject) {
-          setTimeout(function() {
-            resolve("Hello, world!");
+//your JS code here. If required.
+function updateOutput() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve('Hello, world!');
           }, 1000);
         });
       }
-
-      delayedGreeting().then(function(greeting) {
-        var output = document.getElementById("output");
-        output.textContent = greeting;
+      
+      updateOutput().then((message) => {
+        document.getElementById('output').innerText = message;
       });
